@@ -21,7 +21,7 @@ the URL for an event stream to monitor, for example the `api-gateway` service ru
 or running into docker: `http://api-gateway:8080/actuator/hystrix.stream`
 
 
-You can tell Config Server to use your local Git repository by using `local` Spring profile and setting
+You can tell Config Server to use your local Git repository by using `local` Spring profile and setting.
 `GIT_REPO` environment variable, for example:
 `-Dspring.profiles.active=local -DGIT_REPO=/projects/spring-petclinic-microservices-config`
 
