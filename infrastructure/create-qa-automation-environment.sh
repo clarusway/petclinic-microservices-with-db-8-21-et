@@ -13,7 +13,7 @@ chmod 400 ${CFN_KEYPAIR}
 # Create infrastructure for Docker Swarm
 aws cloudformation create-stack --region ${AWS_REGION} --stack-name ${APP_STACK_NAME} --capabilities CAPABILITY_IAM --template-body file://${CFN_TEMPLATE} --parameters ParameterKey=KeyPairName,ParameterValue=${CFN_KEYPAIR}
 
-# Install Docker Swarm environment on the infrastructure
+# Install Docker Swarm environment on the infrastructure .....
 # Update dynamic inventory (hosts/docker nodes)
 sed -i "s/APP_STACK_NAME/$APP_STACK_NAME/" ./ansible/inventory/dev_stack_dynamic_inventory_aws_ec2.yaml
 # Install common tools on all instances/nodes
