@@ -1,5 +1,5 @@
 version: '2'
-#test
+
 services: 
   config-server:
     image: petclinic-config-server:dev
