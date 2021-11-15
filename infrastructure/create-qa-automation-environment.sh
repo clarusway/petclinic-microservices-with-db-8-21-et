@@ -7,7 +7,7 @@ AWS_REGION="us-east-1"
 export ANSIBLE_PRIVATE_KEY_FILE="${WORKSPACE}/${CFN_KEYPAIR}"
 export ANSIBLE_HOST_KEY_CHECKING=False
 export APP_STACK_NAME="Call-$APP_NAME-App-${BUILD_NUMBER}"
-# Create key pair for Ansible
+# Create key pair for Ansibles
 aws ec2 create-key-pair --region ${AWS_REGION} --key-name ${CFN_KEYPAIR} --query "KeyMaterial" --output text > ${CFN_KEYPAIR}
 chmod 400 ${CFN_KEYPAIR}
 # Create infrastructure for Docker Swarm
